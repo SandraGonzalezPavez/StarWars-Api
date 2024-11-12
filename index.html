@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Wars API</title>
+    <link rel="stylesheet" href="./assets/css/BootstrapCSS/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="icon" type="image/x-icon" href="/assets/img/favicon1.ico">
+    
+</head>
+
+<body onload="asignarEventos()">
+    <h1 class="titulo-principal">Dimensiones en la vida real de los personajes</h1>
+
+    <div class="timeline">
+        <div class="entry">
+            <div class="title">
+                <h3 id="primeros">1-5</h3>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="circle"></div> <!-- Círculo de color -->
+                                <h3 class="card-title">En esta sección...</h3>
+                                <p class="card-text">Encontrarás información sobre los personajes más populares de las películas.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor donde aparecerán las tarjetas generadas -->
+                    <div class="col-sm generated-cards">
+                        <!-- Aquí se insertarán dinámicamente las tarjetas generadas -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry1">
+            <div class="title">
+                <h3 id="segundos">6-10</h3>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="circle1"></div> <!-- Círculo de color -->
+                                <h3 class="card-title">En esta sección...</h3>
+                                <p class="card-text">Encontrarás información sobre personajes secundarios importantes.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor donde aparecerán las tarjetas generadas -->
+                    <div class="col-sm generated-cards">
+                        <!-- Aquí se insertarán dinámicamente las tarjetas generadas -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="entry2">
+            <div class="title">
+                <h3 id="terceros">11-15</h3>
+            </div>
+            <div class="body">
+                <div class="row">
+                    <div class="col-sm">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="circle2"></div> <!-- Círculo de color -->
+                                <h3 class="card-title">En esta sección...</h3>
+                                <p class="card-text">Encontrarás otros personajes significativos.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Contenedor donde aparecerán las tarjetas generadas -->
+                    <div class="col-sm generated-cards">
+                        <!-- Aquí se insertarán dinámicamente las tarjetas generadas -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="./assets/js/logica.js"></script>
+    <script src="./assets/js/BootstrapJS/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+

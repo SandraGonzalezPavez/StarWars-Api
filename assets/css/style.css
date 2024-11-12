@@ -1,0 +1,250 @@
+body {
+   
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 12vh 100px;
+    font-family: 'Source Sans Pro', arial, sans-serif;
+    font-weight: 300;
+    color: #333;
+    box-sizing: border-box;
+    background-image: url(../img/4107909.jpg); /* Ruta a la imagen*/
+    background-attachment: fixed;
+    background-repeat: repeat;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.titulo-principal {
+    font-size: xx-large;
+    color: transparent;
+    background: linear-gradient(90deg, #810b0b, #f8e71c, #50e3c2, #4a90e2);
+    background-clip: text;
+    -webkit-background-clip: text;
+    font-weight: bold;
+    position: absolute; /* Posición absoluta para situarlo arriba */
+    top: 20px; 
+    left: 50%; /* Centrado horizontalmente */
+    transform: translateX(-50%); /* Ajuste para centrar exactamente */
+    text-align: center;
+    width: 100%; /* Ancho completo */
+    z-index: 10; /* Para asegurar que esté encima de otros elementos */
+}
+
+.timeline {
+    width: 100%;
+    
+   
+    padding: 100px 50px;
+    position: relative;
+    
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    top: 0px;
+    left: calc(13.5% + 15px);
+    bottom: 0px;
+    width: 4px;
+    background: #18ec46;
+}
+
+.timeline:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.entry, .entry1, .entry2 {
+    clear: both;
+    text-align: left;
+    position: relative;
+}
+
+.entry .title, .entry1 .title, .entry2 .title {
+    margin-bottom: 0.5em;
+    float: left;
+    width: 33%;
+    padding-right: 150px;
+    text-align: right;
+    position: relative;
+}
+
+.entry .title:before, .entry1 .title:before, .entry2 .title:before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%;
+    top: 15%;
+    left:150px;
+    z-index: 99;
+    background-color: rgb(235, 162, 53);
+}
+
+.entry .title h3, .entry1 .title h3, .entry2 .title h3 {
+    margin: 0;
+    font-size: 120%;
+    color: aliceblue;
+    margin-right: 140px;
+}
+
+
+
+.entry .body, .entry1 .body, .entry2 .body {
+    margin: 0 0 3em;
+    float: left; /* Mueve los elementos hacia la izquierda */
+    width: 90%;
+    padding-left: 10px;
+    
+}
+
+
+
+
+.entry .body p, .entry1 .body p, .entry2 .body p {
+    line-height: 1.4em;
+}
+
+.entry .body p:first-child, .entry1 .body p:first-child, .entry2 .body p:first-child {
+    margin-top: 0;
+    font-weight: 400;
+}
+
+.entry .body ul, .entry1 .body ul, .entry2 .body ul {
+    color: #aaa;
+    padding-left: 0;
+    list-style-type: none;
+}
+
+.entry .body ul li:before, .entry1 .body ul li:before, .entry2 .body ul li:before {
+    content: "–";
+    margin-right: 0.5em;
+    
+}
+
+.card {
+    box-shadow: 0px 0px 5px #333;
+    border: 2px solid #333;
+    width: 100%;
+    max-width: 300px;
+    padding: 40px;
+    position: relative;
+    background-color: aliceblue;
+    margin-left: 180px; /* Ajusta el valor para mover hacia la izquierda */
+}
+
+
+.circle, .circle1, .circle2 {
+    width: 20px; /* Tamaño del círculo */
+    height: 20px;
+    border-radius: 50%; /* Hace que el div tenga forma circular */
+    position: absolute;
+    top: 50%; /* Centra el círculo verticalmente */
+    left: 5px; /* Pone el círculo en el lado izquierdo */
+    transform: translateY(-50%); /* Centra verticalmente el círculo */
+}
+
+.circle {
+    background-color: #f85050; /* Color del círculo */
+}
+
+.circle1 {
+    background-color: #51e77e; /* Color del círculo */
+}
+
+.circle2 {
+    background-color: #6dadf7; /* Color del círculo */
+}
+
+/* Ajustes para alinear las tarjetas generadas */
+.entry .body .row,
+.entry1 .body .row,
+.entry2 .body .row {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+.entry .body .col-sm,
+.entry1 .body .col-sm,
+.entry2 .body .col-sm {
+    flex: 1 1 170px; 
+    
+}
+
+.generated-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    width: 100%;
+    align-items: stretch; /* Asegura que todas las tarjetas tengan la misma altura */
+}
+
+/* Estilo para las tarjetas */
+.generated-cards .card {
+    flex: 1 1 calc(33.33% - 1rem); /* Distribuye las tarjetas en 3 columnas */
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #ddd;
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #333;
+    border: 2px solid #333;
+    height: 150px; /* Altura fija para todas las tarjetas */
+   
+}
+.col-sm .generated{
+    flex: 1 1 10%; /* Ajusta el tamaño de las tarjetas según el ancho del contenedor */
+    max-width: 250px; /* Limita el ancho máximo de las tarjetas */
+    padding: 10px;
+    margin-bottom: 1rem; /* Agrega un pequeño espacio entre las tarjetas */
+    
+}
+@media (min-width: 769px) {
+    .card {
+        margin-left: 180px; /* Solo para pantallas grandes */
+    }
+}
+@media (max-width: 768px) {
+    body {
+        padding: 8vh 50px;
+    }
+    .titulo-principal {
+        font-size: large;
+    }
+    .timeline {
+        padding: 50px 20px;
+    }
+    .generated-cards .card {
+        flex: 1 1 calc(50% - 1rem); /* 2 columnas en tablets */
+    }
+}
+
+/* Responsivo para pantallas pequeñas (teléfonos) */
+@media (max-width: 480px) {
+    body {
+        padding: 5vh 20px;
+    }
+    .titulo-principal {
+        font-size: medium;
+        top: 10px;
+    }
+    .timeline:before {
+        left: calc(10% + 10px); /* Ajusta la línea de la timeline */
+    }
+    .generated-cards .card {
+        flex: 1 1 100%; /* 1 columna en móviles */
+    }
+    .card, .entry .title, .entry .body, .col-sm .generated {
+        width: 100%;
+        margin: 0 auto; /* Centrado */
+    }
+    .entry .title h3, .entry .body p {
+        font-size: 1em; /* Ajusta tamaño de fuente */
+    }
+}
